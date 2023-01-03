@@ -1,0 +1,55 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: aqua;
+    width: 500px;
+    margin: 10px;
+    /* blurr effect */
+    background-color: rgba(255, 255, 255, .15); 
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(30px);
+}
+
+.inp-container{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.inp-container input{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 5px rgb(232, 232, 232);
+    outline: none;
+    padding: 12px;
+    font-size: 15px;
+}
+
+.form-label{
+    margin-right: 40px;
+    font-size: 20px;
+    font-weight: 500;
+}
+#name{
+    margin-left: 15px;
+}
+
+.form button{
+    width: 180px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: orange;
+}
+
+.form button:hover{
+    background-color: black;
+    color: white;
+}

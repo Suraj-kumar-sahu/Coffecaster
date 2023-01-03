@@ -1,13 +1,14 @@
 const hre = require("hardhat");
 
 async function main() {
-  const chai = await hre.ethers.getContractFactory("chai");
-  const contract = await chai.deploy(); //instance of contract
-
-  await contract.deployed();
-  console.log("Address of contract:", contract.address);
+    const Coffee = await hre.ethers.getContractFactory("Coffee");
+    const contract = await Coffee.deploy();
+    await contract.deployed();
+    console.log("Address of contract:", contract.address);
 }
+
+
 main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
+    console.error(error);
+    process.exitCode = 1;
 });

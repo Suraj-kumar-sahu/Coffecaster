@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import "./Memos.css" ;
+
 const Memos = ({ state }) => {
   const [memos, setMemos] = useState([]);
   const { contract } = state;
@@ -13,63 +15,24 @@ const Memos = ({ state }) => {
 
   return (
     <>
-      <p style={{ textAlign: "center", marginTop: "20px" }}>Messages</p>
+    <div className="Memos">
+      <h3 >Supporters</h3>
       {memos.map((memo) => {
         return (
-          <div
-            className="container-fluid"
-            style={{ width: "100%" }}
-            key={Math.random()}
-          >
-            <table
-              style={{
-                marginBottom: "10px",
-              }}
-            >
-              <tbody>
-                <tr>
-                  <td
-                    style={{
-                      backgroundColor: "#96D4D4",
-                      border: "1px solid white",
-                      borderCollapse: "collapse",
-                      padding: "7px",
-                      width: "100px",
-                    }}
-                  >
+          <div id="table-container">
+            <table >
+              <tbody id="table-body">
+                <tr className="t-row">
+                  <td className="t-data">
                     {memo.name}
                   </td>
-                  <td
-                    style={{
-                      backgroundColor: "#96D4D4",
-                      border: "1px solid white",
-                      borderCollapse: "collapse",
-                      padding: "7px",
-                      width: "800px",
-                    }}
-                  >
+                  <td className="t-data">
                     {new Date(memo.timestamp * 1000).toLocaleString()}
                   </td>
-                  <td
-                    style={{
-                      backgroundColor: "#96D4D4",
-                      border: "1px solid white",
-                      borderCollapse: "collapse",
-                      padding: "7px",
-                      width: "300px",
-                    }}
-                  >
+                  <td className="t-data">
                     {memo.message}
                   </td>
-                  <td
-                    style={{
-                      backgroundColor: "#96D4D4",
-                      border: "1px solid white",
-                      borderCollapse: "collapse",
-                      padding: "7px",
-                      width: "400px",
-                    }}
-                  >
+                  <td className="t-data">
                     {memo.from}
                   </td>
                 </tr>
@@ -78,6 +41,8 @@ const Memos = ({ state }) => {
           </div>
         );
       })}
+
+  </div>  
     </>
   );
 };
